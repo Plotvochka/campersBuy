@@ -1,0 +1,67 @@
+.container {
+  display: flex;
+  gap: 24px;
+  border: 1px solid #dadde1;
+  border-radius: 20px;
+  padding: 24px;
+  width: 888px;
+  height: 368px;
+}
+
+.mainImg {
+  width: 292px;
+
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.infoWrap {
+  width: 524px;
+  height: 320px;
+}
+
+.firstInfo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.firstSpace {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.33;
+}
+
+.secondInfo {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  line-height: 1.5;
+}
+
+.icon {
+  margin-right: 4px;
+}
+
+.description {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  line-height: 1.5;
+  color: #475467;
+  margin-bottom: 24px;
+}
+
+.showMore {
+  padding-top: 24px;
+}
