@@ -1,18 +1,14 @@
 import Location from "../Location/Location.jsx";
-import Properties from "../Properties/Properties.jsx";
-import PropTypes from "prop-types";
+import FilterType from "../FilterType/FilterType.jsx";
+import css from "./Filter.module.css";
 
-const Filter = (campers) => {
+const Filter = () => {
   return (
-    <div>
+    <div className={css.wrap}>
       <Location />
-      <Properties campers={campers} />
+      <FilterType />
     </div>
   );
 };
 
 export default Filter;
-
-Filter.propTypes = {
-  campers: PropTypes.array,
-};

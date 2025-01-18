@@ -35,25 +35,10 @@
   line-height: 1.33;
 }
 
-.secondInfo {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-direction: row;
-  gap: 16px;
-  margin-bottom: 24px;
-}
-
 .heartWrap {
   display: flex;
   align-items: center;
   gap: 12px;
-}
-
-.rating {
-  display: flex;
-  align-items: center;
-  line-height: 1.5;
 }
 
 .icon {
@@ -68,7 +53,4 @@
   line-height: 1.5;
   color: #475467;
   margin-bottom: 24px;
-}
-
-.showMore {
 }

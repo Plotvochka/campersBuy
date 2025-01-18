@@ -1,0 +1,17 @@
+.secondInfo {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  line-height: 1.5;
+}
+.icon {
+  margin-right: 4px;
+}

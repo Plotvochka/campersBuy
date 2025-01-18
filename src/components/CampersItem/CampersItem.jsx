@@ -4,6 +4,7 @@ import Icon from "../Icon/Icon.jsx";
 import Properties from "../Properties/Properties.jsx";
 import { NavLink } from "react-router-dom";
 import Button from "../Button/Button.jsx";
+import RatingAndLocation from "../RatingAndLocation/RatingAndLocation.jsx";
 
 const CampersItem = ({ campers }) => {
   return (
@@ -21,16 +22,11 @@ const CampersItem = ({ campers }) => {
             <Icon id="icon-heart" className={css.icon} width="26" height="24" />
           </div>
         </div>
-        <div className={css.secondInfo}>
-          <div className={css.rating}>
-            <Icon id="icon-star" className={css.icon} width="16" height="16" />
-            {campers.rating} ({campers.reviews.length} reviews)
-          </div>
-          <div className={css.rating}>
-            <Icon id="icon-map" className={css.icon} width="16" height="16" />
-            {campers.location}
-          </div>
-        </div>
+        <RatingAndLocation
+          rating={campers.rating}
+          lengthRev={campers.reviews.length}
+          location={campers.location}
+        />
         <div className={css.description}>{campers.description}</div>
         <Properties campers={campers} />
         <NavLink className={css.showMore} to={`/catalog/${campers.id}`}>

@@ -3,11 +3,12 @@ import Campers from "../../components/Campers/Campers.jsx";
 import css from "./CatalogPage.module.css";
 import { useSelector } from "react-redux";
 import { selectAllCampers } from "../../redux/campers/selectors.js";
+
 const CatalogPage = () => {
   const campers = useSelector(selectAllCampers);
   return (
     <main className={css.main}>
-      <Filter campers={campers} />
+      <Filter />
       <Campers campers={campers} />
     </main>
   );

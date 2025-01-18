@@ -6,7 +6,7 @@ import CatalogPage from "./pages/CatalogPage/CatalogPage.jsx";
 import CampersDetailPage from "./pages/CampersDetailPage/CampersDetailPage.jsx";
 import NotFoundPage from "./pages/NotFoundPage/NotFoundPage.jsx";
 import { useDispatch } from "react-redux";
-import { useEffect } from "react";
+import { useEffect, Suspense } from "react";
 import { fetchCampers } from "./redux/campers/operations.js";
 
 function App() {
@@ -18,12 +18,14 @@ function App() {
   return (
     <>
       <Layout>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/catalog" element={<CatalogPage />} />
-          <Route path="/catalog/:id" element={<CampersDetailPage />} />
-          <Route path="*" element={<NotFoundPage />} />
-        </Routes>
+        <Suspense fallback={null}>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/catalog" element={<CatalogPage />} />
+            <Route path="/catalog/:id" element={<CampersDetailPage />} />
+            <Route path="*" element={<NotFoundPage />} />
+          </Routes>
+        </Suspense>
       </Layout>
     </>
   );
