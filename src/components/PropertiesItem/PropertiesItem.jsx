@@ -6,7 +6,7 @@ const PropertiesItem = ({ icon, name }) => {
   return (
     <div className={css.wrap}>
       <Icon id={icon} width="20" height="20" className={css.icon} />
-      <p className={css.text}>{name}</p>
+      <p className={css.name}>{name}</p>
     </div>
   );
 };

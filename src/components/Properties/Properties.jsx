@@ -7,8 +7,11 @@ const Properties = ({ campers }) => {
     <div className={css.wrapProperties}>
       <PropertiesItem icon="icon-diagram" name={campers.transmission} />
       <PropertiesItem icon="icon-fuel-pump" name={campers.engine} />
-      {campers.kitchen && <PropertiesItem icon="icon-cup-hot" name="Kitchen" />}
       {campers.AC && <PropertiesItem icon="icon-wind" name="AC" />}
+      {campers.bathroom && (
+        <PropertiesItem icon="icon-shower" name="bathroom" />
+      )}
+      {campers.kitchen && <PropertiesItem icon="icon-cup-hot" name="kitchen" />}
       {campers.TV && <PropertiesItem icon="icon-tv" name="TV" />}
       {campers.radio && <PropertiesItem icon="icon-ui-radios" name="radio" />}
       {campers.refrigerator && (

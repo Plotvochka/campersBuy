@@ -13,11 +13,13 @@ const CampersItem = ({ campers }) => {
         alt="Camper"
         className={css.mainImg}
       />
-
       <div className={css.infoWrap}>
         <div className={css.firstInfo}>
           <p className={css.firstSpace}>{campers.name}</p>
-          <p className={css.firstSpace}>€{campers.price}.00</p>
+          <div className={css.heartWrap}>
+            <p className={css.firstSpace}>€{campers.price}.00</p>
+            <Icon id="icon-heart" className={css.icon} width="26" height="24" />
+          </div>
         </div>
         <div className={css.secondInfo}>
           <div className={css.rating}>

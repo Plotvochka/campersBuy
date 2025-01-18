@@ -6,6 +6,8 @@
   padding: 24px;
   width: 888px;
   height: 368px;
+  box-sizing: border-box;
+  margin-bottom: 32px;
 }
 
 .mainImg {
@@ -42,6 +44,12 @@
   margin-bottom: 24px;
 }
 
+.heartWrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
 .rating {
   display: flex;
   align-items: center;
@@ -63,5 +71,4 @@
 }
 
 .showMore {
-  padding-top: 24px;
 }

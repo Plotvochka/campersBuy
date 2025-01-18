@@ -1,7 +1,7 @@
 .wrapProperties {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 16px;
+  margin-bottom: 24px;
   height: 104px;
   white-space: nowrap;
   overflow: hidden;
