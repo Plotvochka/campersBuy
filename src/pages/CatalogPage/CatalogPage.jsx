@@ -1,18 +1,15 @@
+import Filter from "../../components/Filter/Filter.jsx";
+import Campers from "../../components/Campers/Campers.jsx";
+import css from "./CatalogPage.module.css";
 import { useSelector } from "react-redux";
-import { selectAllCampers } from "../../redux/campers/selectors";
-import CampersList from "../../components/CampersList/CampersList";
-
+import { selectAllCampers } from "../../redux/campers/selectors.js";
 const CatalogPage = () => {
   const campers = useSelector(selectAllCampers);
-
   return (
-    <div>
-      {campers !== null && (
-        <ul>
-          <CampersList campers={campers} />
-        </ul>
-      )}
-    </div>
+    <main className={css.main}>
+      <Filter campers={campers} />
+      <Campers campers={campers} />
+    </main>
   );
 };
 

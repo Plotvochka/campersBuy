@@ -15,7 +15,7 @@ const Properties = ({ campers }) => {
       {campers.TV && <PropertiesItem icon="icon-tv" name="TV" />}
       {campers.radio && <PropertiesItem icon="icon-ui-radios" name="radio" />}
       {campers.refrigerator && (
-        <PropertiesItem icon="icon-refrigerator" name="refrigerator" />
+        <PropertiesItem icon="icon-fridge" name="refrigerator" />
       )}
       {campers.microwave && (
         <PropertiesItem icon="icon-microwave" name="microwave" />
