@@ -56,5 +56,22 @@ const campersSlice = createSlice({
   },
 });
 
+const initialState = {
+  name: "",
+};
+
+const filtersSlice = createSlice({
+  name: "filters",
+  initialState,
+  reducers: {
+    changeFilter: (state, { payload }) => {
+      state.name = initialState;
+      state.name = payload;
+    },
+  },
+});
+
 export const { clearItems, setPage } = campersSlice.actions;
 export default campersSlice.reducer;
+export const { changeFilter } = filtersSlice.actions;
+export const filterReducer = filtersSlice.reducer;

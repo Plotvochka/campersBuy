@@ -2,22 +2,20 @@ import { Field, Form, Formik } from "formik";
 import css from "./FilterType.module.css";
 import Icon from "../Icon/Icon.jsx";
 import Button from "../Button/Button.jsx";
+import clsx from "clsx";
 
 const FilterType = () => {
   const initialValues = {
-    toggle: false,
     location: "",
     equipment: [],
     type: "",
   };
 
-  const handleSubmit = (values) => {
-    values;
-  };
+  const handleSubmit = () => {};
 
   return (
     <Formik initialValues={initialValues} onSubmit={handleSubmit}>
-      {() => (
+      {({ values }) => (
         <Form className={css.wrap}>
           <p className={css.text}>Filters</p>
           <div id="checkbox-group" className={css.title}>
@@ -29,7 +27,12 @@ const FilterType = () => {
             aria-labelledby="checkbox-group"
             className={css.wrapCheck}
           >
-            <label className={css.check}>
+            <label
+              className={clsx(
+                css.check,
+                values.equipment.includes("AC") ? css.active : undefined
+              )}
+            >
               <Field
                 type="checkbox"
                 name="equipment"
@@ -39,7 +42,12 @@ const FilterType = () => {
               <Icon id="icon-wind" width="32" height="32" />
               AC
             </label>
-            <label className={css.check}>
+            <label
+              className={clsx(
+                css.check,
+                values.equipment.includes("Automatic") ? css.active : undefined
+              )}
+            >
               <Field
                 type="checkbox"
                 name="equipment"
@@ -49,7 +57,12 @@ const FilterType = () => {
               <Icon id="icon-diagram" width="32" height="32" />
               <p>Automatic</p>
             </label>
-            <label className={css.check}>
+            <label
+              className={clsx(
+                css.check,
+                values.equipment.includes("Kitchen") ? css.active : undefined
+              )}
+            >
               <Field
                 type="checkbox"
                 name="equipment"
@@ -59,7 +72,12 @@ const FilterType = () => {
               <Icon id="icon-cup-hot" width="32" height="32" />
               Kitchen
             </label>
-            <label className={css.check}>
+            <label
+              className={clsx(
+                css.check,
+                values.equipment.includes("TV") ? css.active : undefined
+              )}
+            >
               <Field
                 type="checkbox"
                 name="equipment"
@@ -69,7 +87,12 @@ const FilterType = () => {
               <Icon id="icon-tv" width="32" height="32" />
               TV
             </label>
-            <label className={css.check}>
+            <label
+              className={clsx(
+                css.check,
+                values.equipment.includes("Bathroom") ? css.active : undefined
+              )}
+            >
               <Field
                 type="checkbox"
                 name="equipment"
@@ -79,7 +102,12 @@ const FilterType = () => {
               <Icon id="icon-shower" width="32" height="32" />
               Bathroom
             </label>
-            <label className={css.check}>
+            <label
+              className={clsx(
+                css.check,
+                values.equipment.includes("Petrol") ? css.active : undefined
+              )}
+            >
               <Field
                 type="checkbox"
                 name="equipment"
@@ -89,7 +117,14 @@ const FilterType = () => {
               <Icon id="icon-fuel-pump" width="32" height="32" />
               Petrol
             </label>
-            <label className={css.check}>
+            <label
+              className={clsx(
+                css.check,
+                values.equipment.includes("Refrigerator")
+                  ? css.active
+                  : undefined
+              )}
+            >
               <Field
                 type="checkbox"
                 name="equipment"
@@ -99,7 +134,12 @@ const FilterType = () => {
               <Icon id="icon-fridge" width="32" height="32" />
               Refrigerator
             </label>
-            <label className={css.check}>
+            <label
+              className={clsx(
+                css.check,
+                values.equipment.includes("Microwave") ? css.active : undefined
+              )}
+            >
               <Field
                 type="checkbox"
                 name="equipment"
@@ -109,7 +149,12 @@ const FilterType = () => {
               <Icon id="icon-microwave" width="32" height="32" />
               Microwave
             </label>
-            <label className={css.check}>
+            <label
+              className={clsx(
+                css.check,
+                values.equipment.includes("Gas") ? css.active : undefined
+              )}
+            >
               <Field
                 type="checkbox"
                 name="equipment"
@@ -119,7 +164,12 @@ const FilterType = () => {
               <Icon id="icon-gas" width="32" height="32" />
               Gas
             </label>
-            <label className={css.check}>
+            <label
+              className={clsx(
+                css.check,
+                values.equipment.includes("Water") ? css.active : undefined
+              )}
+            >
               <Field
                 type="checkbox"
                 name="equipment"
@@ -139,7 +189,12 @@ const FilterType = () => {
             aria-labelledby="radio-group"
             className={css.wrapCheck}
           >
-            <label className={css.check}>
+            <label
+              className={clsx(
+                css.check,
+                values.type === "Van" ? css.active : undefined
+              )}
+            >
               <Field
                 type="radio"
                 name="type"
@@ -149,7 +204,13 @@ const FilterType = () => {
               <Icon id="icon-grid-1x2" width="32" height="32" />
               Van
             </label>
-            <label className={css.check} style={{ padding: "4px 18px" }}>
+            <label
+              className={clsx(
+                css.check,
+                values.type === "Fully Integrated" ? css.active : undefined
+              )}
+              style={{ padding: "4px 18px" }}
+            >
               <Field
                 type="radio"
                 name="type"
@@ -159,7 +220,12 @@ const FilterType = () => {
               <Icon id="icon-grid" width="32" height="32" />
               Fully Integrated
             </label>
-            <label className={css.check}>
+            <label
+              className={clsx(
+                css.check,
+                values.type === "Alcove" ? css.active : undefined
+              )}
+            >
               <Field
                 type="radio"
                 name="type"

@@ -55,6 +55,6 @@ hr {
   display: none;
   margin: 0;
 }
-.check:checked {
+.active {
   border: 1px solid #d84343;
 }
