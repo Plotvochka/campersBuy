@@ -1,18 +1,18 @@
 .button {
-  margin-top: 20px;
-  border-radius: 15px;
-  border: none;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
+  border: 1px solid #dadde1;
+  border-radius: 200px;
+  padding: 16px 32px;
+  width: 145px;
+  height: 56px;
+  background-color: transparent;
   font-weight: 500;
-  font-family: inherit;
-  background-color: #bd26bb;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+  color: #101828;
   cursor: pointer;
-  transition: border-color 0.25s;
 }
 
-.button:focus,
 .button:hover {
-  background-color: #d689d5;
   color: #e4e3e9;
 }

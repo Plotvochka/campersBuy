@@ -31,7 +31,7 @@ const CampersItem = ({ campers }) => {
         <div className={css.description}>{campers.description}</div>
         <Properties campers={campers} />
         <NavLink className={css.showMore} to={`/catalog/${campers.id}`}>
-          <Button>Show more</Button>
+          <Button className="">Show more</Button>
         </NavLink>
       </div>
     </div>

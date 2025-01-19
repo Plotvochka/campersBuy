@@ -1,9 +1,6 @@
 .wrap {
-  /* box-sizing: border-box; */
   border-radius: 10px;
-  padding: 44px 80px;
-  width: 631px;
-  height: 588px;
+  padding: 44px 52px;
   background: #f7f7f7;
 }
 

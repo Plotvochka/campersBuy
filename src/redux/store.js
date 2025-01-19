@@ -16,14 +16,16 @@ import campersReducer from "./campers/slice";
 const persistAuthConfig = {
   key: "campers",
   storage,
-  whitelist: ["campers"],
 };
 
-const persistedAuthReducer = persistReducer(persistAuthConfig, campersReducer);
+const persistedCampersReducer = persistReducer(
+  persistAuthConfig,
+  campersReducer
+);
 
 export const store = configureStore({
   reducer: {
-    campers: persistedAuthReducer,
+    campers: persistedCampersReducer,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
