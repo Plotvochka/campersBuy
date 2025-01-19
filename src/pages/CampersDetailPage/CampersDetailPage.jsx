@@ -1,9 +1,11 @@
+import CamperInfo from "../../components/CamperInfo/CamperInfo.jsx";
+import css from "./CampersDetailPage.module.css";
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import { fetchCamper } from "../../redux/campers/operations.js";
 import { selectCamper } from "../../redux/campers/selectors.js";
-import RatingAndLocation from "../../components/RatingAndLocation/RatingAndLocation.jsx";
+import Features from "../../components/Features/Features.jsx";
 
 const CampersDetailPage = () => {
   const { id } = useParams();
@@ -23,12 +25,10 @@ const CampersDetailPage = () => {
   }
   return (
     <>
-      {camper.name}
-      <RatingAndLocation
-        rating={camper.rating}
-        lengthRev={camper.reviews.length}
-        location={camper.location}
-      />
+      <main className={css.main}>
+        <CamperInfo camper={camper} />
+        <Features camper={camper} />
+      </main>
     </>
   );
 };

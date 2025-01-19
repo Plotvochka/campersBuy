@@ -26,6 +26,7 @@ const CampersItem = ({ campers }) => {
           rating={campers.rating}
           lengthRev={campers.reviews.length}
           location={campers.location}
+          className=""
         />
         <div className={css.description}>{campers.description}</div>
         <Properties campers={campers} />

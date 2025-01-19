@@ -1,0 +1,47 @@
+.mainText {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.33333;
+  color: #101828;
+}
+.mainText:first-child {
+  margin-bottom: 8px;
+}
+
+.ratingAndLocation {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  color: #101828;
+}
+
+.list {
+  display: flex;
+  gap: 48px;
+  margin-top: 28px;
+  margin-bottom: 28px;
+}
+
+.item {
+  border-radius: 10px;
+  height: 312px;
+  position: relative;
+  overflow: hidden;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* object-position: center; */
+}
+
+.description {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #475467;
+  margin-bottom: 60px;
+}

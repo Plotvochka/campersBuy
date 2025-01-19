@@ -1,10 +1,11 @@
 import PropTypes from "prop-types";
 import css from "./Properties.module.css";
 import PropertiesItem from "../PropertiesItem/PropertiesItem";
+import clsx from "clsx";
 
-const Properties = ({ campers }) => {
+const Properties = ({ campers, className = "" }) => {
   return (
-    <div className={css.wrapProperties}>
+    <div className={clsx(css.wrapProperties, className)}>
       <PropertiesItem icon="icon-diagram" name={campers.transmission} />
       <PropertiesItem icon="icon-fuel-pump" name={campers.engine} />
       {campers.AC && <PropertiesItem icon="icon-wind" name="AC" />}
@@ -30,4 +31,5 @@ export default Properties;
 
 Properties.propTypes = {
   campers: PropTypes.object,
+  className: PropTypes.string,
 };
